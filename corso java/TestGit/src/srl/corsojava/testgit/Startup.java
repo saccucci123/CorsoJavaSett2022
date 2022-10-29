@@ -8,6 +8,7 @@ public class Startup {
 		
 		
 		System.out.println("test git");
+		System.out.println("ciaooo");
 		
 	}
 
