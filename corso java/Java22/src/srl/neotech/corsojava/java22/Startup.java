@@ -30,10 +30,7 @@ public class Startup {
 		
 		c.getCisterne().add(cisternaMia);
 		
-		
-	    
-			
-			
+	
 		}
 		
 		
