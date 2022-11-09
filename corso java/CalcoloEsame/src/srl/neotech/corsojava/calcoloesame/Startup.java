@@ -25,20 +25,20 @@ public class Startup {
 	 System.out.println("La somma delle prove e' "+somma);
 	 
 	 
-	 if(prova.get(0)<=0 && somma>18)
+	 if(prova.get(0)<=0)
 		 System.out.println("Lo studente viene bocciato");
 	 
-	 else if(prova.get(0)<=0 && prova.get(1)<18) 
-		 System.out.println("Lo studente e bocciato");
-	 else if(prova.get(0)>0 && somma>18)
-		 System.out.println("Lo studente viene bocciato");
+	 else if(prova.get(0)>=18 && prova.get(1)>=18) 
+		 System.out.println("Lo studente e promosso");
+	 else if(prova.get(0)>0 && prova.get(0)<18 && somma>24)
+		 System.out.println("Lo studente viene promosso");
 	 
-	 else if (somma==31||somma==32)
+	 else if (prova.get(0)==30 && prova.get(1)==30)
 		 System.out.println("Congratulazioni: 30 e lode ");
 	 else
-		 System.out.println("Promosso");
+		 System.out.println("Rimandato");
 	 
-	 
+
 	 
 	 
 	 
