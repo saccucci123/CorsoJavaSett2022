@@ -1,19 +1,19 @@
 package srl.neotech.corsojava.gestionebiblioteca;
 
-import java.util.ArrayList;
-
 public class Associato {
 	
 	private Integer idAssociato;
 	private String nominato;
 	enum stato{attivo,rimosso}
 	private String stato;
+	private Integer libriPresi;
 	
-	private ArrayList<Libro> listaIdPresi=new ArrayList <Libro>();
-	
-	
-	 
-	
+   public Integer getLibriPresi() {
+		return libriPresi;
+	}
+	public void setLibriPresi(Integer libriPresi) {
+		this.libriPresi = libriPresi;
+	}
 	public String getStato() {
 		return stato;
 	}
@@ -35,8 +35,8 @@ public class Associato {
 	}
 	@Override
 	public String toString() {
-		return "Associato [idAssociato=" + idAssociato + ", nominato=" + nominato + ", stato=" + stato
-				+ ", listaIdPresi=" + listaIdPresi + "]";
+		return "Associato [idAssociato=" + idAssociato + ", nominato=" + nominato + ", stato=" + stato + ", libriPresi="
+				+ libriPresi + "]";
 	}
 	
 
