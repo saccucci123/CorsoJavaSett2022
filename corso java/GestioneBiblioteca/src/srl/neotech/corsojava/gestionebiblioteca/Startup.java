@@ -43,8 +43,6 @@ for(int i=1; i<=100; i++) {
 	
 	libri.add(libros);
 	
-	
-	
 	Associato associatone=new Associato();
 	Integer casualeLibri=rnd.nextInt(1,10);
 	String nom1=f.name().fullName();
@@ -69,9 +67,7 @@ Integer remove1=rnd.nextInt(1,99);
 libri.remove(remove1);
 idassociato.remove(remove1);
 System.out.println("Associato rimosso "+idassociato);
-
 System.out.println("Libro rimosso "+libri);
-
 }
 }
 

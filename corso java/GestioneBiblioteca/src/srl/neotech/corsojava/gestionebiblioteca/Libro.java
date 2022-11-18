@@ -9,10 +9,6 @@ public class Libro {
 	private Integer scaffale;
 	private String sezione;
 	
-	
-	
-	
-	
 	public String getSezione() {
 		return sezione;
 	}
