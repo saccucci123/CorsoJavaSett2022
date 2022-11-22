@@ -69,16 +69,4 @@ public class Aereo extends Aeroporto {
 				+ ", passeggeri=" + passeggeri + ", velocita=" + velocita + ", distanzaDallAeroporto="
 				+ distanzaDallAeroporto + ", modello=" + modello + ", stato=" + stato + "]";
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-}
+	}
