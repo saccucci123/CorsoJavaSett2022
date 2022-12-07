@@ -22,18 +22,19 @@ th, td {
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
 <script src="static/js/script.js"></script>
+<link rel="stylesheet" href="static/css/impiccato.css">
 </head>
 <body>
 <div class="clearfix">
 <div class="row">
 <div class="col-md-3"></div>
 <div class="col-md-6">
-<input type="text" id="box1" value="l" size=2>
-<input type="text" id="box2" value="i" size=2>
-<input type="text" id="box3" value="m" size=2>
-<input type="text" id="box4" value="o" size=2>
-<input type="text" id="box5" value="n" size=2>
-<input type="text" id="box6" value="e" size=2>
+<input type="text" id="box1"size=2>
+<input type="text" id="box2"size=2>
+<input type="text" id="box3"size=2>
+<input type="text" id="box4"size=2>
+<input type="text" id="box5"size=2>
+<input type="text" id="box6"size=2>
 </div>
 <div class="col-md-3"></div>
 
@@ -66,41 +67,18 @@ th, td {
      <th id="d9" bgcolor="#000000"></th>
   </tr>
 </table>
-
-
-
-
-
 </table>
-
-
 </div>
-
-
-
 <div class="col-md-3"></div>
 </div>
-
-
-
 <div class="row">
 <div class="col-md-6">
 </div>
-<h3 id="win" Hai vinto!! </h3> <i class="fa-solid fa-thumbs-up" style="font-size:48px"></i>
-<h3 id="loser" Hai perso</h3>
-<i class="fa-solid fa-face-nauseated"></i>
 <div class="col-md-6"></div>
 </div>
 
 </div>
 
 </div>
-
-
-
-
-
-
-
 </body>
 </html>

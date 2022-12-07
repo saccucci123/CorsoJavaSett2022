@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+body{
+	
+background-image: url("https://wallpaperaccess.com/full/40047.jpg");
+
+}
+
+table,th,td{border: 2px solid black;margin-left:auto;margin-right:auto;margin-top:20px;}
+
+
+th, td {padding: 40px;
+}
+button {
+padding:10px 32.5px;
+margin-top:8px;
+border-color: black;
+}
+#g1{background-color:green;
+}
+#g2{background-color:Aqua;
+}
+
