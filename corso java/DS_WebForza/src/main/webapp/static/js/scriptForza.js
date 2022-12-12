@@ -4,7 +4,7 @@ $( document ).ready(function() {
  var cerchioIns=[];
 
 	
-  for (var i=0; i<7; i++){
+  for (var i=0; i<8; i++){
 		var col=0;
 		colonne.push(col);
 	}
@@ -19,8 +19,27 @@ $(":button").click(function(){
 	cerchioIns.push(cerchioCol);
 	colonne[pulsValue]++; 
 	$("#"+pulsValue+"_"+riga).css("background-color", colore);
+	controlloVincita();
 	
 	})
+	function controllaVincita () {
+		
+		var win;
+		
+		for(var i=8; i>colonne; i--){
+		for(j=1; j<=8; j++){
+		var cell=$("#riga ("+i+")+_("+j+"))
+			
+		}
+		
+		
+		
+	}
+	
+	
+	
+	
+	
 	
 	});
 
