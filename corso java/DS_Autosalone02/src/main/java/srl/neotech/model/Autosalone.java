@@ -17,10 +17,10 @@ public class Autosalone {
 		//popolare la lista delle autos...
 		Automobile primaAuto=new Automobile();
 		primaAuto.setId("1");
-		primaAuto.setTarga("BR556TY");
+		primaAuto.setTarga("GL236BH");
 		primaAuto.setColore(EColore.BLU);
 		primaAuto.setAlimentazione(EAlimentazione.IBRIDO);
-		primaAuto.setAnnoCostruzione("2021");
+		primaAuto.setAnnoCostruzione("2022");
 		primaAuto.setCostruttore(ECostruttore.BUGATTI);
 		primaAuto.setModello("Veyron");
 		primaAuto.setCosto(new BigDecimal("450670.50"));
@@ -65,8 +65,8 @@ public class Autosalone {
 	        quartaAuto.setModello("MC20");
 	        quartaAuto.setCosto(new BigDecimal("500009.50"));
 
-	        primaAuto.getAccessori().add(cerchiLega);
-	        automobili.add(primaAuto);
+	      
+	       
 	        automobili.add(secondaAuto);
 	        automobili.add(terzaAuto);
 	        automobili.add(quartaAuto);

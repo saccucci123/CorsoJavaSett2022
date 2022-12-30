@@ -105,7 +105,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Lista Automobili</h1>
+            <h1>Rimuovi Automobili</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -120,31 +120,43 @@
     <section class="content">
     <div class="clearfix">
        <div class="row">
-          <div class="md-col-12 text-center" >
-              <table width="100%" class="table table-bordered table-hover dataTable dtr-inline">
+       <div class="col-md-4"></div>
+          <div class="col-md-4">
+          <table width="100%" class="table table-bordered table-hover dataTable dtr-inline">
               <thead>
+              <td>check</td>
               <td>Id</td>
               <td>Targa</td>
               <td>Costruttore</td>
               <td>Modello</td>
               <td>Anno</td>
               <td>Costo</td>
-              <td>Azioni</td>
+              
               </thead>
              <c:forEach var="auto" items="${listaAuto}" >
                         <tr>
+                        
+                        <td><div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-danger active">
+                        <input type="checkbox" checked autocomplete="off"></label>
+                        </div>
+                        </td>
                         <td>${auto.id}</td>
                         <td>${auto.targa}</td>
                         <td>${auto.costruttore}</td>
                         <td>${auto.modello}</td>
                         <td>${auto.annoCostruzione}</td>
                         <td>${auto.costo}</td>
-                        <td><input class="btn btn-primary" type="button" value="Dettagli"></button></td>
+                        
                         </tr>
               </c:forEach>
               
               </table>
+              <button type="button" class="btn btn-success">
+              Rimuovi
+              </button>
           </div>
+          <div class="col-md-4"></div>
        
        </div>
     

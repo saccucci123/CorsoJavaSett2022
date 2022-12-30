@@ -38,4 +38,25 @@ public class AutosaloneController {
         autoSalone.getAutomobili().add(auto);
         return "redirect:/listAuto";
     }
+    
+    @GetMapping("/rimuoviAuto")
+    public String rimuoviauto (ModelMap modelMap) {
+        modelMap.addAttribute("listaAuto", autoSalone.getAutomobili());
+        return "rimuoviAuto";
+    
+    
+    
+    }
+    @GetMapping("/dettagliAutomobile")
+    public String dettagliautomobile (ModelMap modelMap) {
+        modelMap.addAttribute("listaAuto", autoSalone.getAutomobili());
+        return "dettagliAutomobile";
+    
+    
+    
+    }
+    
+    
+    
+    
 }
