@@ -3,6 +3,10 @@ package srl.neotech.model;
 import java.awt.GraphicsDevice.WindowTranslucency;
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import javax.swing.text.html.HTMLDocument.Iterator;
 
 import org.springframework.stereotype.Component;
 
@@ -17,7 +21,7 @@ public class Autosalone {
 		//popolare la lista delle autos...
 		Automobile primaAuto=new Automobile();
 		primaAuto.setId("1");
-		primaAuto.setTarga("GL236BH");
+		primaAuto.setTarga("GL567BH");
 		primaAuto.setColore(EColore.BLU);
 		primaAuto.setAlimentazione(EAlimentazione.IBRIDO);
 		primaAuto.setAnnoCostruzione("2022");
@@ -25,15 +29,13 @@ public class Autosalone {
 		primaAuto.setModello("Veyron");
 		primaAuto.setCosto(new BigDecimal("450670.50"));
 		
-		Accessorio cerchiLega=new Accessorio();
+	    Accessorio cerchiLega=new Accessorio();
+	    cerchiLega.setId("1");
 		cerchiLega.setClasse(EClasseAccessorio.ESTERNI);
 		cerchiLega.setTipologia(ETipologiaAccessorio.CERCHI);
 		cerchiLega.setCosto(new BigDecimal("3700.34"));
 		
-		primaAuto.getAccessori().add(cerchiLega);
-		automobili.add(primaAuto);
-		
-		Automobile secondaAuto = new Automobile();
+		   Automobile secondaAuto = new Automobile();
 		   secondaAuto.setId("2");
 	       secondaAuto.setTarga("GL230GH");
 	       secondaAuto.setColore(EColore.NERO);
@@ -65,8 +67,8 @@ public class Autosalone {
 	        quartaAuto.setModello("MC20");
 	        quartaAuto.setCosto(new BigDecimal("500009.50"));
 
-	      
-	       
+	        primaAuto.getAccessori().add(cerchiLega);
+	        automobili.add(primaAuto);
 	        automobili.add(secondaAuto);
 	        automobili.add(terzaAuto);
 	        automobili.add(quartaAuto);
@@ -83,7 +85,32 @@ public class Autosalone {
 		this.automobili = automobili;
 	}
 	
+	public Automobile getAutomobileById(String id) {
+		
+		   for(Automobile auto: automobili) {
+		
+			   if(auto.getId().equals(id)) {
+				   return auto;
+			   }
+		   }
+		   return null;
+
+}
 	
-	
+	public void removeAutoById(String idRemove) {
+	    List<Automobile> automobiliDaRimuovere = new ArrayList<>();
+	    
+	    for (Automobile auto : automobili) {
+	        if (auto.getId().equals(idRemove)) {
+	            automobiliDaRimuovere.add(auto);
+	        }
+	    }
+	    System.out.println("Id da rimuovre " + automobiliDaRimuovere);
+	    automobili.removeAll(automobiliDaRimuovere);
+	}
+
+
+
+
 	
 }

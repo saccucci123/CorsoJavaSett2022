@@ -106,7 +106,6 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Lista Automobili</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -121,56 +120,90 @@
     <section class="content">
     <div class="clearfix">
        <div class="row">
-          <div class="col-md-4"></div>
-          <div class="col-md-4">
-          
-          <form id="auto" action="add" method="Post">
-          
+          <div class="col-md-2" >
           <div class= "form-group">
           <label>ID</label>
-          <input id="id" class= "form-control" name="id" type="text" value="">
+          <input id="id" class= "form-control" name="id" type="text" value="${auto.id}">
           </div>
-          
-          <div class= "form-group">
-          <label>TARGA </label>
-          <input id="targa" class= "form-control" name="targa" type="text" value="">
-		  </div>
-          
-          <div class= "form-group">
-          <label>COSTRUTTORE </label>
-          <select id="costruttore" name="costruttore" class="form-control select2bs4 select2-hidden-accessible">
-	      <option value="FERRARI">FERRARI</option>
-	      <option value="LAMBORGHINI">LAMBORGHINI</option>
-	      <option value="MASERATI">MASERATI</option>
-	      <option value="BUGATTI">BUGATTI</option>
-		  </select>
           </div>
-          
+          <div class="col-md-5"></div>
+          <div class="col-md-5"></div>
+       </div>
+    </div>
+        <h3>Dettagli Auto</h3>
+        
+    <div class="container">
+    <div class="row">
+
+    <div class="col-md-4">
+    <div class= "form-group">
+  
+          <label>TARGA</label>
+          <input id="targa" class= "form-control" name="targa" type="text" value="${auto.targa}">
+          </div>
            <div class= "form-group">
-          <label>MODELLO</label>
-          <input id="modello" class= "form-control" name="modello" type="text" value="">
-		  </div>
-		  
-		   <div class= "form-group">
-          <label>ANNO </label>
-          <input id="annoCostruzione" class= "form-control" name="annoCostruzione" type="text" value="">
-		  </div>
-          
+          <label>ALIMENTAZIONE</label>
+          <input id="alimentazione" class= "form-control" name="alimentazione" type="text" value="${auto.alimentazione}">
+          </div>
            <div class= "form-group">
           <label>COSTO</label>
-          <input id="costo" class= "form-control" name="costo" type="text" value="">
-		  </div>
-		  
-		  <button class="btn btn-primary" type="submit" id="sottomettiForm">AGGIUNGI</button>
-          
-          </form>
+          <input id="costo" class= "form-control" name="costo" type="text" value="${auto.costo}">
           </div>
-          <div class="col-md-4"></div>
-       
-       </div>
-    
     </div>
-
+    
+     <div class="col-md-4">
+     <div class= "form-group">
+          <label>COSTRUTTORE</label>
+          <input id="costruttore" class= "form-control" name="costruttore" type="text" value="${auto.costruttore}">
+          </div>
+          <div class= "form-group">
+          <label>ANNO</label>
+          <input id="annoCostruzione" class= "form-control" name="anno" type="text" value="${auto.annoCostruzione}">
+          </div>
+     </div>
+      <div class="col-md-4">
+       <div class= "form-group">
+          <label>MODELLO</label>
+          <input id="modello" class= "form-control" name="modello" type="text" value="${auto.modello}">
+          </div>
+           <div class= "form-group">
+          <label>COLORE</label>
+          <input id="colore" class= "form-control" name="colore" type="text" value="${auto.colore}">
+          </div>
+      </div>
+    </div>
+    </div>
+    
+  <h3>ACCESSORI</h3>
+  <div class="container">
+  <div class="row">
+  <div class="col-md-4">
+    <table class="table table-bordered table-hover dataTable dtr-inline">
+              <thead>
+              <td>Id</td>
+              <td>Classe</td>
+              <td>Tipologia</td>
+              <td>Descrizione</td>
+              <td>Costo</td>
+              </thead>
+              <tbody>
+               <c:forEach var="accessori" items="${listaccessori}" >
+                        <tr>
+                        <td>${accessori.id}</td>
+                        <td>${accessori.classe}</td>
+                        <td>${accessori.tipologia}</td>
+                        <td>${accessori.descrizione}</td>
+                        <td>${accessori.costo}</td>
+                        </tr>
+              </c:forEach>
+              </tbody>
+              </table>
+              </div>
+  <div class="col-md-4"></div>
+  <div class="col-md-4"></div>
+  
+  </div>
+  </div>
 
     </section>
     <!-- /.content -->

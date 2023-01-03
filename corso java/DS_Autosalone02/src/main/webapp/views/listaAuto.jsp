@@ -73,8 +73,9 @@
               <i class="nav-icon fas fa-th"></i>
               <p>Aggiungi Auto</p>
             </a>
-            <li class="nav-item">
-            <a href="rimuoviAuto" class="nav-link">
+          </li>
+           <li class="nav-item">
+            <a href="removeAuto" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>Rimuovi Auto</p>
             </a>
@@ -86,7 +87,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="dettagliAutomobile" class="nav-link">
+            <a href="detailsAuto" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>Dettaglio Auto</p>
             </a>
@@ -118,10 +119,13 @@
 
     <!-- Main content -->
     <section class="content">
-    <div class="clearfix">
+       <div class = "container">
        <div class="row">
-          <div class="md-col-12 text-center" >
-              <table width="100%" class="table table-bordered table-hover dataTable dtr-inline">
+       
+       <div class="col"></div>
+       
+          <div class="col" >
+              <table class="table table-bordered table-hover dataTable dtr-inline">
               <thead>
               <td>Id</td>
               <td>Targa</td>
@@ -129,7 +133,6 @@
               <td>Modello</td>
               <td>Anno</td>
               <td>Costo</td>
-              <td>Azioni</td>
               </thead>
              <c:forEach var="auto" items="${listaAuto}" >
                         <tr>
@@ -139,15 +142,14 @@
                         <td>${auto.modello}</td>
                         <td>${auto.annoCostruzione}</td>
                         <td>${auto.costo}</td>
-                        <td><input class="btn btn-primary" type="button" value="Dettagli"></button></td>
+                        <td><a href="detailsAuto?id=${auto.id}"<input class="btn btn-primary" type="button" value="Dettagli"></button></a></td>
                         </tr>
               </c:forEach>
-              
               </table>
           </div>
-       
-       </div>
+          <div class="col"></div>
     
+    </div>
     </div>
 
 

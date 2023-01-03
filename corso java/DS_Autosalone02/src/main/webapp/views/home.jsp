@@ -73,8 +73,9 @@
               <i class="nav-icon fas fa-th"></i>
               <p>Aggiungi Auto</p>
             </a>
-            <li class="nav-item">
-            <a href="rimuoviAuto" class="nav-link">
+          </li>
+           <li class="nav-item">
+            <a href="removeAuto" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>Rimuovi Auto</p>
             </a>
@@ -86,7 +87,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="dettagliAutomobile" class="nav-link">
+            <a href="detailsAuto" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>Dettaglio Auto</p>
             </a>
