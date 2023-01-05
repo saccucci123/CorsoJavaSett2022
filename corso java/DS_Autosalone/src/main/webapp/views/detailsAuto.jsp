@@ -9,16 +9,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Template</title>
 
-
- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="static/js/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="static/css/adminlte.min.css">
-  
-  <script src="static/js/remove.js"></script>
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
@@ -85,9 +81,9 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="insertData" class="nav-link">
+            <a href="cerca" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
-              <p>Cerca Auto</p>
+              <p>CercaAuto</p>
             </a>
           </li>
           <li class="nav-item">
@@ -110,7 +106,6 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Rimuovi Auto</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -125,50 +120,90 @@
     <section class="content">
     <div class="clearfix">
        <div class="row">
-       <div class="col-md-4"></div>
-          <div class="col-md-4 text-center" >
-          
-  <form action="remove" method="post" id="form-remove">
-  <table width="100%" class="table table-bordered table-hover dataTable dtr-inline">
-    <thead>
-      <td>Check</td>
-      <td>Id</td>
-      <td>Targa</td>
-      <td>Costruttore</td>
-      <td>Modello</td>
-      <td>Anno</td>
-      <td>Costo</td>
-    </thead>
-    <c:forEach var="auto" items="${listaAuto}" >
-      <tr>
-        <td>
-          <div class="btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-primary">
-              <input type="checkbox" name="idRemove" value="${auto.id}" checked autocomplete="off">
-            </label>
+          <div class="col-md-2" >
+          <div class= "form-group">
+          <label>ID</label>
+          <input id="id" class= "form-control" name="id" type="text" value="${auto.id}">
           </div>
-        </td>
-        <td>${auto.id}</td>
-        <td>${auto.targa}</td>
-        <td>${auto.costruttore}</td>
-        <td>${auto.modello}</td>
-        <td>${auto.annoCostruzione}</td>
-        <td>${auto.costo}</td>
-      </tr>
-      <script>
-      console.log("Dentro il ciclo: " + auto.id);
-      </script>
-    </c:forEach>
-  </table>
-  <button type="submit" class="btn btn-success">Rimuovi</button>
-      </form>
           </div>
-          
-       <div class="col-md-4"></div>
+          <div class="col-md-5"></div>
+          <div class="col-md-5"></div>
        </div>
-    
     </div>
+        <h3>Dettagli Auto</h3>
+        
+    <div class="container">
+    <div class="row">
+
+    <div class="col-md-4">
+    <div class= "form-group">
   
+          <label>TARGA</label>
+          <input id="targa" class= "form-control" name="targa" type="text" value="${auto.targa}">
+          </div>
+           <div class= "form-group">
+          <label>ALIMENTAZIONE</label>
+          <input id="alimentazione" class= "form-control" name="alimentazione" type="text" value="${auto.alimentazione}">
+          </div>
+           <div class= "form-group">
+          <label>COSTO</label>
+          <input id="costo" class= "form-control" name="costo" type="text" value="${auto.costo}">
+          </div>
+    </div>
+    
+     <div class="col-md-4">
+     <div class= "form-group">
+          <label>COSTRUTTORE</label>
+          <input id="costruttore" class= "form-control" name="costruttore" type="text" value="${auto.costruttore}">
+          </div>
+          <div class= "form-group">
+          <label>ANNO</label>
+          <input id="annoCostruzione" class= "form-control" name="anno" type="text" value="${auto.annoCostruzione}">
+          </div>
+     </div>
+      <div class="col-md-4">
+       <div class= "form-group">
+          <label>MODELLO</label>
+          <input id="modello" class= "form-control" name="modello" type="text" value="${auto.modello}">
+          </div>
+           <div class= "form-group">
+          <label>COLORE</label>
+          <input id="colore" class= "form-control" name="colore" type="text" value="${auto.colore}">
+          </div>
+      </div>
+    </div>
+    </div>
+    
+  <h3>ACCESSORI</h3>
+  <div class="container">
+  <div class="row">
+  <div class="col-md-4">
+    <table class="table table-bordered table-hover dataTable dtr-inline">
+              <thead>
+              <td>Id</td>
+              <td>Classe</td>
+              <td>Tipologia</td>
+              <td>Descrizione</td>
+              <td>Costo</td>
+              </thead>
+              <tbody>
+               <c:forEach var="accessori" items="${listaccessori}" >
+                        <tr>
+                        <td>${accessori.id}</td>
+                        <td>${accessori.classe}</td>
+                        <td>${accessori.tipologia}</td>
+                        <td>${accessori.descrizione}</td>
+                        <td>${accessori.costo}</td>
+                        </tr>
+              </c:forEach>
+              </tbody>
+              </table>
+              </div>
+  <div class="col-md-4"></div>
+  <div class="col-md-4"></div>
+  
+  </div>
+  </div>
 
     </section>
     <!-- /.content -->

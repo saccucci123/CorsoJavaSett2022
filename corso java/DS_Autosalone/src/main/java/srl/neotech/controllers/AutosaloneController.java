@@ -52,6 +52,7 @@ public class AutosaloneController {
 		return "removeAuto";
 	}
 	
+	
 	@PostMapping("/remove")
 	public String removeAuto(@RequestParam("idRemoveArray") List<String> idRemoveArray, ModelMap modelMap) {
 	    for (String idRemove : idRemoveArray) {
@@ -60,6 +61,7 @@ public class AutosaloneController {
 	    modelMap.addAttribute("listaAuto", autoSalone.getAutomobili());
 	    return "redirect:/listAuto";
 	}
+
 
 	
 	
@@ -73,8 +75,24 @@ public class AutosaloneController {
 	}
 	
 	
+	@GetMapping("/cerca")
+	public String searchAuto(ModelMap modelMap) {
+		
+		List<Automobile> automobili = autoSalone.getAutomobili();
+	    // Aggiungi la lista di automobili al model map
+	    modelMap.addAttribute("auto", automobili);
 
-
+	    return "cerca";
+		
+	}
 	
-
+	@PostMapping("/cerca")
+	public String search(@RequestParam("searchTerm") String search, ModelMap modelMap) {
+		
+		List<Automobile> result = autoSalone.search(search);
+	    // Aggiungi il risultato della ricerca al model map
+	    modelMap.addAttribute("result", result);
+	    System.out.println("Risultati" + result);
+		return "cerca";
+	}
 }

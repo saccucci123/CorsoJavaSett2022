@@ -21,7 +21,7 @@ public class Autosalone {
 		//popolare la lista delle autos...
 		Automobile primaAuto=new Automobile();
 		primaAuto.setId("1");
-		primaAuto.setTarga("GL567BH");
+		primaAuto.setTarga("GL212GT");
 		primaAuto.setColore(EColore.BLU);
 		primaAuto.setAlimentazione(EAlimentazione.IBRIDO);
 		primaAuto.setAnnoCostruzione("2022");
@@ -105,8 +105,24 @@ public class Autosalone {
 	            automobiliDaRimuovere.add(auto);
 	        }
 	    }
-	    System.out.println("Id da rimuovre " + automobiliDaRimuovere);
 	    automobili.removeAll(automobiliDaRimuovere);
+	}
+	public List<Automobile> search(String searchTerm) {
+	    // Inizializza una lista vuota di automobili
+	    List<Automobile> result = new ArrayList<>();
+	    // Itera sulla lista di automobili
+	    for (Automobile auto : automobili) {
+	        // Verifica se il modello o il marchio dell'automobile contiene la stringa di ricerca
+	        if (searchTerm.equalsIgnoreCase(auto.getCostruttore().name()) 
+	           || searchTerm.equalsIgnoreCase(auto.getAlimentazione().name()) 
+	           || searchTerm.equalsIgnoreCase(auto.getColore().name()) 
+	           || auto.getTarga().equals(searchTerm) || auto.getModello().equals(searchTerm)) {
+	            // Aggiungi l'automobile alla lista dei risultati
+	            result.add(auto);
+	        }
+	    }
+	    // Restituisci la lista dei risultati
+	    return result;
 	}
 
 
