@@ -81,9 +81,9 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="cerca" class="nav-link">
+            <a href="insertData" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
-              <p>CercaAuto</p>
+              <p>Cerca Auto</p>
             </a>
           </li>
           <li class="nav-item">
