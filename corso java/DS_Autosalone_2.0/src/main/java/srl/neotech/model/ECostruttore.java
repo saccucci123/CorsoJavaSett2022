@@ -7,5 +7,4 @@ public enum ECostruttore {
 	PORCHE,
 	MASERATI,
 	BUGATTI
-
 }

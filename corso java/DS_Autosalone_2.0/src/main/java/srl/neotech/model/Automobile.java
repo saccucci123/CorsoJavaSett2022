@@ -4,9 +4,6 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class Automobile {
-
-	
-	
 	private String id;
 	private String targa;
 	private ECostruttore costruttore;
@@ -75,6 +72,13 @@ public class Automobile {
 	}
 	
 	
-
-
+	public Automobile(String id, String targa, EColore colore) {
+		this.id =id;
+		this.targa =targa;
+		this.colore = colore;
+	}
+	
+	public Automobile() {
+		
+	}
 }

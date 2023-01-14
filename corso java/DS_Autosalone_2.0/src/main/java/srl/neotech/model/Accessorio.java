@@ -3,7 +3,7 @@ package srl.neotech.model;
 import java.math.BigDecimal;
 
 public class Accessorio {
-	
+
 	private String id;
 	private EClasseAccessorio classe;
 	private ETipologiaAccessorio tipologia;
@@ -40,5 +40,10 @@ public class Accessorio {
 	public void setCosto(BigDecimal costo) {
 		this.costo = costo;
 	}
-
+	
+	@Override
+	public String toString() {
+		return "Accessorio [id=" + id + ", classe=" + classe + ", tipologia=" + tipologia + ", descrizione="
+				+ descrizione + ", costo=" + costo + "]";
+	}
 }
