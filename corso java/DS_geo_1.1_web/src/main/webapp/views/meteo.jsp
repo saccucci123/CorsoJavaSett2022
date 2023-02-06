@@ -26,6 +26,8 @@
           <select id="regione" name="regione" class="form-control select2bs4 select2-hidden-accessible">
           <option value="">Selezione un opzione</option>
 		  </select>
+		
+		  
 </div>
 </div>
 <div class="col-md-4">
